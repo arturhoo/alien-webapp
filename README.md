@@ -1,4 +1,8 @@
-# Alien RFID Web Interface
+# Alien RFID Web App
+
+[![CodeClimate](http://img.shields.io/codeclimate/github/arturhoo/alien-webapp.svg)](https://codeclimate.com/github/arturhoo/alien-webapp)
+[![Gemnasium](http://img.shields.io/gemnasium/arturhoo/alien-webapp.svg)](https://gemnasium.com/arturhoo/alien-webapp)
+
 
 ## Components
 
