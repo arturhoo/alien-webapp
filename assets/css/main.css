@@ -1,0 +1,37 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.welcome {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+#manual input, #auto input, #auto a {
+  margin-bottom: 20px;
+}
+
+#after-auto-button {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  max-width: 0;
+  -webkit-transition: opacity 0.25s, max-width 0.45s;
+  -moz-transition: opacity 0.25s, max-width 0.45s;
+  -o-transition: opacity 0.25s, max-width 0.45s;
+  transition: opacity 0.25s, max-width 0.45s;
+}
+
+.has-spinner.active {
+  cursor: progress;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  max-width: 50px;
+}

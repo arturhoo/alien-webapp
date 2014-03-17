@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'alien', git: 'https://github.com/arturhoo/alien'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'faye'
+gem 'foreman'
+gem 'pry'
+gem 'rerun'
+gem 'sinatra'
+gem 'sucker_punch'
+gem 'thin'
