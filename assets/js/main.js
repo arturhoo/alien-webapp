@@ -31,8 +31,8 @@ function enableAutoMode() {
 }
 
 function getTags() {
+  $('#manual-tags').empty();
   $.getJSON('/tags.json', function(data) {
-    $('#manual-tags').empty();
     $.each(data, function(key, val) {
       $('#manual-tags').append(val + '\n');
     });
