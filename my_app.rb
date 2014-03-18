@@ -49,11 +49,22 @@ class MyApp < Sinatra::Base
   post '/api' do
     request.body.rewind
     data = request.body.read
-    settings.faye_client.publish '/alien', text: data
+    parsed_msg = parse_msg(data)
+    settings.faye_client.publish '/alien', text: parsed_msg
   end
 
   post '/job' do
     MyAlienNotifierJob.new.async.perform(logger, settings.faye_client)
     'From sinatra: auto mode enabled'
   end
+end
+
+def parse_msg(msg)
+  parsed_lines = []
+  msg.split("\n").each do |l|
+    parsed_lines << l if l.include? 'Tag:'
+    parsed_lines << l if l.include? '#Time'
+  end
+  parsed_lines << '--'
+  parsed_lines.join "\n"
 end
