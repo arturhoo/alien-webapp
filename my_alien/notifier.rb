@@ -15,8 +15,8 @@ module MyAlien
 
       r.notifyaddress    = "http://#{MyAlien.app_addr}:5000/api"
       r.notifytrigger    = 'add'
-      r.notifytime       = '5'
-      r.notifyformat     = 'text'
+      r.notifytime       = '6'
+      r.notifyformat     = 'terse'
       r.notifymode       = 'on'
       # r.notifynow
 
@@ -25,7 +25,6 @@ module MyAlien
       sleep(30)
 
       r.automode         = 'off'
-      r.notifymode       = 'off'
       r.automodereset
       r.close
     end
