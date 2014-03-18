@@ -41,7 +41,9 @@ class MyApp < Sinatra::Base
 
   get '/tags.json' do
     content_type :json
-    MyAlien::TagList.retrieve.to_json
+    tag_list = MyAlien::TagList.retrieve
+    tag_list << '--'
+    tag_list.to_json
   end
 
   post '/api' do
